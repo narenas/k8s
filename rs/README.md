@@ -7,10 +7,28 @@
 
 * Delete rs from go-demo2.yml
 ```shell
-  kubectl delete -f go-demo2.yml
+  kubectl delete -f go-demo2.yml --cascade=false
 ```
+This operation don´t delete containers, just the rs itself.
 
 * Get rs
 ```shell
   kubectl get rs
 ```
+
+* Use save-config for laters definition updates for objects
+```shell
+  kubectl create -f go-demo-2.yml --save-config
+```
+
+* Updating rs
+```shell
+  kubectl apply -f go-demo-2-scaled.yml
+```
+
+* Get pods/objects names
+```shell
+  kubectl get pods -o name
+```
+
+* 
