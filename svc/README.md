@@ -19,3 +19,8 @@ PORT=$(kubectl get svc go-demo-2-svc \
 ```shell
 kubectl get ep go-demo-2 -o yaml
 ```
+
+## Get all objects in namespace
+```shell
+kubectl get all
+```
