@@ -31,4 +31,14 @@ This operation don´t delete containers, just the rs itself.
   kubectl get pods -o name
 ```
 
-* 
+* Remove label from rs/obkect
+```shell
+  kubectl label $POD_NAME service-
+```
+
+In order to delete a label, suffix the label with -
+
+* Show pods labels
+```shell
+  kubectl get pods --show-labels 
+```
